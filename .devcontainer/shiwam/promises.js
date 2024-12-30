@@ -13,8 +13,8 @@ let promise=new Promise(function(resolved , reject){
 let promises2= new Promise(function(Resolved , Reject){
    
     setTimeout(() => {
-        let a=10;
-        let b=9;
+        let a=9
+        let b=10
         if(a>b){
              console.log("Promise 2 is in progress");
              Resolved({name:'shiwam',age:'24'})
@@ -40,10 +40,19 @@ let promises2= new Promise(function(Resolved , Reject){
 // })
 
 async function response1(params) {
+    try {
+        let waitforresponse=await promises2
 
-    let waitforresponse=Response.promises2
+        console.log(waitforresponse);
+        
+    } catch (error) {
+        console.log(error);
+        
+        
+    }
 
-    console.log(waitforresponse);
+   
     
     
 }
+response1()
