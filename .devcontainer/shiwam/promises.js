@@ -11,26 +11,39 @@ let promise=new Promise(function(resolved , reject){
 })
 
 let promises2= new Promise(function(Resolved , Reject){
-
-    setTimeout((a,b) => {
+   
+    setTimeout(() => {
+        let a=10;
+        let b=9;
         if(a>b){
              console.log("Promise 2 is in progress");
-             resolved()
+             Resolved({name:'shiwam',age:'24'})
              
         }else {
             console.log("Promise2 reject");
-            reject()
+            Reject()
             
         }
         
     }, 2000);
-}).then((user)=>{
-    user(4,5)
-    console.log("passed completd 2");
+
+
+ })
+ //.then((user)=>{
+    
+//     console.log("passed completd 2",user);
     
 
-}).catch((nouser)=>{
-     console.log("promise failed ");
+// }).catch((nouser)=>{
+//      console.log("promise failed ");
      
-})
+// })
 
+async function response1(params) {
+
+    let waitforresponse=Response.promises2
+
+    console.log(waitforresponse);
+    
+    
+}
