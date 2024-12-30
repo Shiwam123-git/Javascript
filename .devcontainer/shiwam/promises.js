@@ -39,7 +39,7 @@ let promises2= new Promise(function(Resolved , Reject){
      
 // })
 
-async function response1(params) {
+async function response2(params) {
     try {
         let waitforresponse=await promises2
 
@@ -55,4 +55,4 @@ async function response1(params) {
     
     
 }
-response1()
+response2()
